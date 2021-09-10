@@ -13,15 +13,19 @@ public class Fruit {
 		this.price = pr;
 	}
 	
-	class FruitComparator implements Comparator<Fruit> {
+	static class FruitComparator implements Comparator<Fruit> {
 		public int compare(Fruit f1, Fruit f2){
 			return f1.name.compareTo(f2.name);
 		}
 	}
 	
-	class FruitComparatorDesc implements Comparator<Fruit> {
+	static class FruitComparatorDesc implements Comparator<Fruit> {
 		public int compare(Fruit f1, Fruit f2){
 			return f2.name.compareTo(f1.name);
 		}
+	}
+	
+	public String toString(){
+		return "Fruit [no = " + no + ", name = " + name + ", price = " + price + "]";
 	}
 }
